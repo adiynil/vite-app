@@ -1,0 +1,28 @@
+<template>
+  <!-- <img alt="Vue logo" src="./assets/logo.png" /> -->
+  <HelloWorld />
+</template>
+
+<script lang="ts">
+import { defineComponent,ref,reactive } from 'vue'
+import HelloWorld from './components/HelloWorld.vue'
+
+export default defineComponent({
+  name: 'App',
+  components: {
+    HelloWorld
+  }
+})
+</script>
+
+<style>
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: 100%;
+  /* text-align: center; */
+  /* color: #2c3e50; */
+  /* margin-top: 60px; */
+}
+</style>
