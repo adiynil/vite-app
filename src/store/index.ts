@@ -5,8 +5,9 @@ export default createStore({
         name: 'vuex'
     },
     mutations: {
-        changeName: ({ name }, payload) => {
-            console.log(`Old: ${name} New: ${payload}`)
+        changeName: (state, payload) => {
+            console.log(`Old: ${state.name} New: ${payload}`)
+            state.name = payload
         }
     },
     getters: {},

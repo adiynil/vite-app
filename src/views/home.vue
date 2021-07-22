@@ -1,38 +1,34 @@
 <template>
-    <div v-show="showMsg">
-        <h2>{{ msg }}</h2>
-    </div>
-    <a-button @click="showMsg = !showMsg">Toggle</a-button>
-    <p>{{ name }}</p>
-    <p><a-button @click="changeName('change name')">CHANGE</a-button></p>
+  <div v-show="showMsg">
+    <h2>{{ msg }}</h2>
+  </div>
+  <a-button @click="showMsg = !showMsg">Toggle</a-button>
+  <p>{{ $store.state.name }}</p>
+  <p><a-button @click="changeName('change name')">CHANGE</a-button></p>
 </template>
 
 <script>
-import { defineComponent,ref,onMounted,readonly } from 'vue';
+import { defineComponent, ref, onMounted } from "vue";
+import { mapState, mapMutations } from "vuex";
 export default defineComponent({
-    props: {
-        msg: {
-            type: String,
-            default: "default message"
-        }
+  props: {
+    msg: {
+      type: String,
+      default: "default message",
     },
-    setup(props, context){
-        let showMsg = ref(false)
-        // console.log(context)
-        let name,changeName
-        onMounted(() => {
-            console.log(this)
-        })
-        // let { name } = ctx.store.state
-        // let { changeName } = ctx.store.mutations
-        return {
-            showMsg,
-            name,changeName
-        }
-    }
-})
+  },
+  setup() {
+    let showMsg = ref(false);
+    return {
+      showMsg,...mapMutations(['changeName'])
+    };
+  },
+//   ...mapState(['name']),
+  mounted(){
+      console.log(this.name);
+      console.log(this.changeName);
+  }
+});
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>
