@@ -50,7 +50,7 @@ export default defineComponent({
     }
   },
   mounted(){
-    echarts.init(document.getElementById("c1")).setOption({
+    echarts.init(document.getElementById("c1") as HTMLElement).setOption({
       title: {
         text: '近六年数据（2015-2020）'
       },
@@ -66,7 +66,7 @@ export default defineComponent({
         { name: '骨干教师数', type: 'bar', data: [152, 155, 170, 173, 181, 188] },
       ]
     })
-    echarts.init(document.getElementById("c2")).setOption({
+    echarts.init(document.getElementById("c2") as HTMLElement).setOption({
       // title: {
       //   text: '教师数据统计'
       // },
@@ -79,7 +79,7 @@ export default defineComponent({
         { radius: 100, center: [800,400], type: 'pie', data: [{name: '女教师', value: 39.31},{name: '男教师', value: 60.69}] },
       ]
     })
-    echarts.init(document.getElementById("c3")).setOption({
+    echarts.init(document.getElementById("c3") as HTMLElement).setOption({
       title: {
         text: '按年龄段统计'
       },

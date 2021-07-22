@@ -1,16 +1,17 @@
 <template>
   <!-- <img alt="Vue logo" src="./assets/logo.png" /> -->
-  <HelloWorld />
+  <!-- <HelloWorld /> -->
+  <router-view />
 </template>
 
 <script lang="ts">
 import { defineComponent,ref,reactive } from 'vue'
-import HelloWorld from './components/HelloWorld.vue'
+// import HelloWorld from './components/HelloWorld.vue'
 
 export default defineComponent({
   name: 'App',
   components: {
-    HelloWorld
+    // HelloWorld
   }
 })
 </script>

@@ -9,7 +9,9 @@
     "ant-design-vue": "^2.2.2",
     "echarts": "^5.1.2",
     "vite-plugin-components": "^0.13.0",
-    "vue": "^3.0.5"
+    "vue": "^3.0.5",
+    "vue-router": "^4.0.10",
+    "vuex": "^4.0.2"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^1.2.5",
